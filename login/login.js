@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('login.html');
+    res.render('login.ejs');
 })
 router.post('/', (req, res) => {
     const { email, password } = req.body;
@@ -46,8 +46,8 @@ router.post('/', (req, res) => {
             iD: user._id
         };
         //console.log(userSave);
-        const token = jwt.sign(userSave, process.env.SECRET_TOKEN, { expiresIn: '30s' });
-        res.cookie('token', token, { maxAge: 30*1000, httpOnly: true });
+        const token = jwt.sign(userSave, process.env.SECRET_TOKEN, { expiresIn: '60s' });
+        res.cookie('token', token, { maxAge: 60*1000, httpOnly: true });
         res.redirect('/dashboard');
     }
 })

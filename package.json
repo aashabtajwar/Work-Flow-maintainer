@@ -15,12 +15,15 @@
     "consolidate": "^0.16.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.11.8",
     "swig": "^1.4.2"
   },
   "devDependencies": {
+    "multer": "^1.4.2",
     "nodemon": "^2.0.6"
   }
 }

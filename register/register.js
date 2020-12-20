@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-    res.render('reg.html')
+    res.render('reg.ejs')
 });
 router.post('/', (req, res) => {
     // register the user
